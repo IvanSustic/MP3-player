@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="856.0"  xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mp3player.Controller">
+    <children>
+        <Label fx:id="songLabel" alignment="CENTER" layoutX="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="856.0" text="MP3 Player" textFill="#ffe100" AnchorPane.bottomAnchor="565.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Arial Bold" size="28.0" />
+            </font>
+        </Label>
+        <ProgressBar fx:id="songProgressBar" layoutX="62.0" layoutY="481.0" onMouseClicked="#setTime" prefHeight="18.0" prefWidth="736.0" progress="0.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="481.0" />
+        <Button fx:id="playButton" layoutX="38.0" layoutY="507.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="37.0" prefWidth="92.0" text="PLAY" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="726.0" AnchorPane.topAnchor="507.0">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font></Button>
+        <Button fx:id="pauseButton" layoutX="137.0" layoutY="508.0" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="37.0" prefWidth="92.0" text="PAUSE" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="627.0" AnchorPane.topAnchor="508.0">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font></Button>
+        <Button fx:id="resetButton" layoutX="236.0" layoutY="508.0" mnemonicParsing="false" onAction="#resetMedia" prefHeight="37.0" prefWidth="92.0" text="RESET" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="528.0" AnchorPane.topAnchor="508.0">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font></Button>
+        <Button fx:id="previousButton" layoutX="338.0" layoutY="508.0" mnemonicParsing="false" onAction="#previousMedia" prefHeight="37.0" prefWidth="92.0" text="PREVIOUS" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="338.0" AnchorPane.rightAnchor="426.0" AnchorPane.topAnchor="508.0" />
+        <Button fx:id="nextButton" layoutX="437.0" layoutY="508.0" mnemonicParsing="false" onAction="#nextMedia" prefHeight="37.0" prefWidth="92.0" text="NEXT" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="437.0" AnchorPane.rightAnchor="327.0" AnchorPane.topAnchor="508.0" />
+        <ComboBox fx:id="speedBox" layoutX="536.0" layoutY="513.0" onAction="#changeSpeed" prefWidth="150.0" promptText="SPEED" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="536.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="513.0" />
+        <Slider fx:id="volumeSlider" layoutX="686.0" layoutY="519.0" max="100.0" min="0" value="50.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="686.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="519.0" />
+        <ListView fx:id="list" layoutX="261.0" layoutY="80.0" onMouseClicked="#selectSong" prefHeight="365.0" prefWidth="516.0" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="261.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="80.0" />
+        <Button fx:id="selectButton" layoutX="50.0" layoutY="94.0" mnemonicParsing="false" onAction="#selectMedia" prefHeight="25.0" prefWidth="101.0" text="Odaberi glazbu" AnchorPane.bottomAnchor="490.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="705.0" AnchorPane.topAnchor="94.0" />
+        <CheckBox fx:id="loop" layoutX="594.0" layoutY="538.0" mnemonicParsing="false" onMouseClicked="#loopMedia" prefHeight="37.0" prefWidth="92.0" text="LOOP" textFill="#ffe100" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="594.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="538.0">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font></CheckBox>
+        <Label fx:id="vrijeme" layoutX="24.0" layoutY="482.0" textFill="#ffe100" />
+        <Label fx:id="ukupnoVrijeme" layoutX="812.0" layoutY="482.0" textFill="#ffe100">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
